@@ -1,6 +1,18 @@
 import React from "react";
+import Modal from '../Modal';
 
 class Header extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = { isOpen: false };
+  }
+
+  toggleModal = () => {
+    this.setState({
+      isOpen: !this.state.isOpen
+    });
+  }
   render() {
     return (
       <header>
@@ -12,19 +24,19 @@ class Header extends React.Component {
           <ul>
             <li>
         
-              <a href="fb.coom">
+              <a href="https://facebook.com/Sankofa.kofi">
                 <i className="fa fa-facebook fa-2x" aria-hidden="true" />
               </a>
             </li>
             <li>
               
-              <a href="fb.coom">
+              <a href="https://twitter.com/Sankofa21613802">
                 <i className="fa fa-twitter fa-2x" aria-hidden="true" />
               </a>
             </li>
             <li>
-              
-              <a href="fb.coom">
+            
+              <a href="https://instagram.com/Sankofaconnections/">
                 <i className="fa fa-instagram fa-2x" aria-hidden="true" />
               </a>
             </li>
@@ -33,12 +45,20 @@ class Header extends React.Component {
         <div className="header-right">
           <button
             style={{
+              
               color: "#fff"
             }}
+            onClick={this.toggleModal}
           >
             About Us
           </button>
         </div>
+
+            <Modal show={this.state.isOpen}
+              onClose={this.toggleModal}>
+              `Here's some content for the modal`
+            </Modal>
+         
       </header>
     );
   }

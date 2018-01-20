@@ -3,11 +3,12 @@ import React from "react";
 class Form extends React.Component {
   render() {
     return (
-      <input
+      <button
         className="button button-primary get-help bt"
         placeholder="Add Me"
+        //disabled={!this.state.email}
         type="submit"
-      />
+      > </button>
     );
   }
 }

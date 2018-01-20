@@ -1,18 +1,29 @@
 {
   "name": "css-modules",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "classnames": "^2.2.5",
     "custom-react-scripts": "0.0.23",
+    "express": "^4.16.2",
+    "jquery": "^3.2.1",
     "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "react-dom": "^15.6.1",
+    "enzyme": "^2.9.1",
+    "enzyme-to-json": "^1.5.1",
+    "react-test-renderer": "^15.6.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "jest": {
+    "snapshotSerializers": ["enzyme-to-json/serializer"]
+  },
+  "proxy": "http://localhost:3000"
 }
