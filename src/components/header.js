@@ -56,7 +56,7 @@ class Header extends React.Component {
 
             <Modal show={this.state.isOpen}
               onClose={this.toggleModal}>
-              `Here's some content for the modal`
+              Sankofa Connections is a virtual Community Center that will function as a platform for the poeple of Ghanaian origin i the diaspora to exchange Ideas, forge lasting friendships and develop networking opportunities for personal and professional advancement.
             </Modal>
          
       </header>
